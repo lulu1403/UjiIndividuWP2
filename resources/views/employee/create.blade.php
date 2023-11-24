@@ -73,7 +73,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col px-5 ">
+                        <div class="col px-5">
                             <div class="row py-2">
                                 <label for="">Tanggal Lahir <span class="text-danger">*)</span></label>
                                 <input type="date" name="tgl_lahir"
@@ -110,7 +110,6 @@
                                 <select name="unit_kerja"
                                     class="form-control @if ($errors->has('unit_kerja')) is-invalid @endif">
                                     <option value="" selected disabled>-- Pilih Unit Kerja --</option>
-
                                     <option value="SDM" {{ old('unit_kerja') == 'SDM' ? 'selected' : '' }}>SDM</option>
                                     <option value="Pemasaran" {{ old('unit_kerja') == 'Pemasaran' ? 'selected' : '' }}>
                                         Pemasaran</option>
@@ -118,7 +117,6 @@
                                         Operasional</option>
                                     <option value="TI" {{ old('unit_kerja') == 'TI' ? 'selected' : '' }}>TI</option>
                                 </select>
-
                                 @if ($errors->has('unit_kerja'))
                                     <small class="text-danger">
                                         {{ $errors->first('unit_kerja') }}
